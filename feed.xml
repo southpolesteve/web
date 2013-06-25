@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>South Pole Steve</title>
+  <subtitle>Blog subtitle</subtitle>
+  <id>http://www.southpolesteve.com</id>
+  <link href="http://www.southpolesteve.com"/>
+  <link href="http://www.southpolesteve.com/feed.xml" rel="self"/>
+  <updated>2013-06-25T03:02:00Z</updated>
+  <author>
+    <name>Steve Faulkner</name>
+  </author>
+  <entry>
+    <title>Make Music Madison</title>
+    <link rel="alternate" href="/make-music-madison/"/>
+    <id>/make-music-madison/</id>
+    <published>2013-06-25T03:02:00Z</published>
+    <updated>2013-06-25T03:02:00Z</updated>
+    <author>
+      <name>Steve Faulkner</name>
+    </author>
+    <content type="html">&lt;p&gt;This past Friday marked the summer solstice and Madison&amp;rsquo;s first annual city wide music festival  - &lt;a href="http://www.makemusicmadison.org/"&gt;Make Music Madison&lt;/a&gt;. If you spent any time outside, especially downtown, it was hard to miss. 270 shows, 210 artists, spread over 110 venues. Music could be heard in literally every part of the city.&lt;/p&gt;
+
+&lt;p&gt;So how was it? Amazing! Typically music events at this scale quickly lose their sense of community. Corporate sponsorship banners and triple fried fair food move in. It makes me feel like another sheep in the herd cycling between the stage and the beer tent. Make Music Madison was the exact opposite experience. Just local people, out in their community, simply playing and listening to music. &lt;/p&gt;
+
+&lt;p&gt;Downtown, many bands were set up right in the sidewalk. I was actively participating by just walking down the street. Stopping every block or two to hear another band play felt… symbiotic. Stripped of the massive stages and national headliners, all that remained was people making music and people listening. Each group, feeding off the other, and creating a massive city wide concert. I have not been to an event in quite some time that gave me a such a profound sense of community. It made me proud to be a Madisonian.&lt;/p&gt;
+
+&lt;p&gt;Bottom line, If you weren&amp;rsquo;t taking in the sounds of the city on Friday, you were truly missing out something uniquely Madison. Mark it on your calendar next year and think about participating. Dust off your old guitar, host some bands in your front yard, or just shoulder a lawn chair and take a walk down state street. You will be glad you did.&lt;/p&gt;
+
+&lt;p&gt;You can see pictures of the event on &lt;a href="http://www.flickr.com/groups/makemusicmadison/"&gt;Flickr&lt;/a&gt; or &lt;a href="https://www.facebook.com/makemusicmadison"&gt;Facebook&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Tour de Madison B-cycle</title>
+    <link rel="alternate" href="/tour-de-madison-bcycle/"/>
+    <id>/tour-de-madison-bcycle/</id>
+    <published>2012-11-18T16:39:00Z</published>
+    <updated>2012-11-18T16:39:00Z</updated>
+    <author>
+      <name>Steve Faulkner</name>
+    </author>
+    <content type="html">&lt;p&gt;In Madison, we are fortunate to have a nice bicycle sharing system called &lt;a href="http://madison.bcycle.com/home.aspx"&gt;Madison B-cycle&lt;/a&gt;. B-cycle is perfect for short trips and the occasional commute. Being located all over the city, I used B-cycles frequently last summer. In this month&amp;rsquo;s newsletter to members, the Madison B-cycle staffed proposed a challenge -  bike all 32 stations in 24 hours. The prize? A Madison B-Cycle t-shirt. How could I say no?&lt;/p&gt;
+
+&lt;p&gt;I recruited my buddy Will to go with me and we planned our trip for a breezy 40 degree day. I even used the B-Cycle API to write a program that would optimize our route (look for another post on this later). We split the trip into 3 stages. Stage 1 started at 7AM on the corner of W. Washington and Regent and took us to 17 stations west of the capitol. Stage 2 was a quick loop of the capitol stations, which we completed over lunch. After work, we completed the final stage taking us to all the east side stations. Total time and distance: roughly 3 hours 30 minutes and just over 20 miles.&lt;/p&gt;
+
+&lt;p&gt;Overall, the experience was quite awesome and fun!. Tour de Bcycle gave us the opportunity to see Madison in an entirely new way. I would highly recommend it to anyone interested. A 24-hour pass is only $5, so you don&amp;rsquo;t even need to be an annual member.&lt;/p&gt;
+
+&lt;p&gt;The GPS I had with me was acting up, but you can see our &lt;a href="http://runkeeper.com/user/southpolesteve/activity/131576726"&gt;incomplete route on runkeeper&lt;/a&gt;. I also brought my DSLR along and put together a short video documenting the trip:&lt;/p&gt;
+
+&lt;div class="flex-video"&gt;&lt;iframe src="http://www.youtube.com/embed/U_Sh93TVW8s" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <title>url_for(anything) with ActiveModel</title>
+    <link rel="alternate" href="/url-for-anything-with-activemodel/"/>
+    <id>/url-for-anything-with-activemodel/</id>
+    <published>2012-04-08T23:23:00Z</published>
+    <updated>2012-04-08T23:23:00Z</updated>
+    <author>
+      <name>Steve Faulkner</name>
+    </author>
+    <content type="html">&lt;p&gt;This weekend, while working on upgrading &lt;a href="https://www.murfie.com"&gt;murfie.com&lt;/a&gt; to Rails 3, I found a situation requiring url_for()&amp;hellip; except, I wasn&amp;rsquo;t using it with an ActiveRecord model :/&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://yehudakatz.com/2010/01/10/activemodel-make-any-ruby-object-feel-like-activerecord/"&gt;Yehunda Katz and ActiveModel&lt;/a&gt; to the rescue! Rails 3&amp;rsquo;s ActiveModel is a great way to mix ActiveRecord functionality into any object. Yehunda&amp;rsquo;s article covers validations and serialization, but glosses over ActiveModel::Naming.&lt;/p&gt;
+&lt;pre class="highlight ruby"&gt;&lt;span class="k"&gt;class &lt;/span&gt;&lt;span class="nc"&gt;Model&lt;/span&gt;
+  &lt;span class="kp"&gt;extend&lt;/span&gt; &lt;span class="no"&gt;ActiveModel&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Naming&lt;/span&gt;
+
+  &lt;span class="nf"&gt;...other&lt;/span&gt; &lt;span class="n"&gt;model&lt;/span&gt; &lt;span class="n"&gt;code&lt;/span&gt;&lt;span class="nf"&gt;..&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Adding this module to a class means that url_for(Model) just works! Of course you need to have routes setup, but url_for will automatically construct the named routes if they match up with the model name.&lt;/p&gt;
+
+&lt;p&gt;Under the hood, rails is calling model_name on the class of the object passed into url_for(). Model.model_name returns a string, but is actually an instance of ActiveModel::Name, which is then used by url_for() to generate the named route for the object.&lt;/p&gt;
+&lt;pre class="highlight ruby"&gt;&lt;span class="n"&gt;pry&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="no"&gt;User&lt;/span&gt;&lt;span class="nf"&gt;.model_name&lt;/span&gt;
+&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;User&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;pry&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="no"&gt;User&lt;/span&gt;&lt;span class="nf"&gt;.model_name.class&lt;/span&gt;
+&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="no"&gt;ActiveModel&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Name&lt;/span&gt;
+&lt;/pre&gt;</content>
+  </entry>
+  <entry>
+    <title>Email Unsubscribe from Hell</title>
+    <link rel="alternate" href="/email-unsubscribe-from-hell/"/>
+    <id>/email-unsubscribe-from-hell/</id>
+    <published>2012-03-07T16:25:00Z</published>
+    <updated>2012-03-07T16:25:00Z</updated>
+    <author>
+      <name>Steve Faulkner</name>
+    </author>
+    <content type="html">&lt;p&gt;Look at this picture. See where I have circled the unsubscirbe link? Yes, that grey text with no underline is a link.  Secha Touch, who sent this email, should be ashamed.&lt;/p&gt;
+
+&lt;p&gt;{% img left /images/unsubscribe.jpg  %}&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Transferring Data Between Heroku Applications</title>
+    <link rel="alternate" href="/transfering-data-between-heroku-applications/"/>
+    <id>/transfering-data-between-heroku-applications/</id>
+    <published>2011-12-09T11:32:00Z</published>
+    <updated>2011-12-09T11:32:00Z</updated>
+    <author>
+      <name>Steve Faulkner</name>
+    </author>
+    <content type="html">&lt;p&gt;Today I found myself needing to move data between two heroku apps.  If you have the pgbackups addon installed, it turns out this is really easy:&lt;/p&gt;
+&lt;pre class="highlight text"&gt;heroku pgbackups:restore DATABASE `heroku pgbackups:url --app myapp` --app myapp-staging
+&lt;/pre&gt;
+&lt;p&gt;Heroku covers the process more in depth in their &lt;a href="&amp;quot;http://devcenter.heroku.com/articles/pgbackups&amp;quot;"&gt;documentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Heroku rocks!&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Rails is for Beginners</title>
+    <link rel="alternate" href="/rails-is-for-beginners/"/>
+    <id>/rails-is-for-beginners/</id>
+    <published>2011-12-08T11:09:00Z</published>
+    <updated>2011-12-08T11:09:00Z</updated>
+    <author>
+      <name>Steve Faulkner</name>
+    </author>
+    <content type="html">&lt;p&gt;This morning I came across an article on hacker news titled &lt;a href="http://www.horsesaysinternet.com/code/rails-is-not-for-beginners/"&gt;Rails Is Not For Beginners&lt;/a&gt;. The article is actually about Sinatra, but the link-bait title is dead wrong. Rails is perfect for beginners and here is why &amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;A friend of mine with zero programming experience recently asked me to help him learn web development. We setup rails together, and I pointed him to some online tutorials. When he called me the next evening, he could barely contain his excitement:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Rails is awesome! I can edit, add, delete! This is a real web app and I made it!&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In Rails, with only a few commands you can have a fully functioning CRUD app built on scaffolding. No experienced Rails developer I know uses scaffolding. So why is it still in the source code? Because Rails is for beginners.&lt;/p&gt;
+
+&lt;p&gt;The best way to teach anyone web development is to inspire them to learn on their own. My friend is a long way from being a productive web developer, but because of Rails he is &lt;strong&gt;excited&lt;/strong&gt; to learn more.&lt;/p&gt;
+
+&lt;p&gt;If you are a beginner and looking for a place to start, I recommend &lt;a href="http://zfer.us/zvmvl"&gt;railstutorial.org&lt;/a&gt;. It is a fantastic resource, and best of all the online version is free.&lt;/p&gt;
+</content>
+  </entry>
+</feed>

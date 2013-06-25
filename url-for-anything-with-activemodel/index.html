@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <link href="../stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
+    <!-- <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'> -->
+  </head>
+  <body>
+    <div class="row">
+      <div class="large-12 columns">
+        <h2><a href="/">South Pole Steve</a></h2>
+        <hr />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-12 columns" role="content">
+          <article>
+    <h3>url_for(anything) with ActiveModel</h3>
+    <p>This weekend, while working on upgrading <a href="https://www.murfie.com">murfie.com</a> to Rails 3, I found a situation requiring url_for()&hellip; except, I wasn&rsquo;t using it with an ActiveRecord model :/</p>
+
+<p><a href="http://yehudakatz.com/2010/01/10/activemodel-make-any-ruby-object-feel-like-activerecord/">Yehunda Katz and ActiveModel</a> to the rescue! Rails 3&rsquo;s ActiveModel is a great way to mix ActiveRecord functionality into any object. Yehunda&rsquo;s article covers validations and serialization, but glosses over ActiveModel::Naming.</p>
+<pre class="highlight ruby"><span class="k">class </span><span class="nc">Model</span>
+  <span class="kp">extend</span> <span class="no">ActiveModel</span><span class="o">::</span><span class="no">Naming</span>
+
+  <span class="nf">...other</span> <span class="n">model</span> <span class="n">code</span><span class="nf">..</span><span class="o">.</span>
+
+<span class="k">end</span>
+</pre>
+<p>Adding this module to a class means that url_for(Model) just works! Of course you need to have routes setup, but url_for will automatically construct the named routes if they match up with the model name.</p>
+
+<p>Under the hood, rails is calling model_name on the class of the object passed into url_for(). Model.model_name returns a string, but is actually an instance of ActiveModel::Name, which is then used by url_for() to generate the named route for the object.</p>
+<pre class="highlight ruby"><span class="n">pry</span><span class="o">&gt;</span> <span class="no">User</span><span class="nf">.model_name</span>
+<span class="o">=&gt;</span> <span class="s2">&quot;User&quot;</span>
+<span class="n">pry</span><span class="o">&gt;</span> <span class="no">User</span><span class="nf">.model_name.class</span>
+<span class="o">=&gt;</span> <span class="no">ActiveModel</span><span class="o">::</span><span class="no">Name</span>
+</pre>
+  </article>
+
+      </div>
+
+    </div>
+
+    <footer class="row">
+      <div class="large-12 columns">
+        <hr />
+        <div class="row">
+          <div class="small-6 columns">
+            <p>&copy; Copyright Steve Faulkner</p>
+          </div>
+          <div class="small-6 columns">
+            <ul class="inline-list right">
+              <li><a href="https://twitter.com/southpolesteve">Twitter</a></li>
+              <li><a href="https://github.com/southpolesteve">Github</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
