@@ -15,7 +15,6 @@ ignore 'post.erb'
 activate :deploy do |deploy|
   deploy.method = :git
   deploy.branch = "master"
-  deploy.remote = "build"
 end
 
 activate :blog do |blog|
