@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>South Pole Steve</title>
-  <subtitle>Blog subtitle</subtitle>
+  <subtitle>Steve Faulkner's Blog</subtitle>
   <id>http://www.southpolesteve.com</id>
   <link href="http://www.southpolesteve.com"/>
   <link href="http://www.southpolesteve.com/feed.xml" rel="self"/>
