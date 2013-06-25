@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <%= stylesheet_link_tag "app" %>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'> -->
+  </head>
+  <body>
+    <div class="row">
+      <div class="large-12 columns">
+        <h2><%= link_to 'South Pole Steve', '/' %></h2>
+        <hr />
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="large-12 columns" role="content">
+        <%= yield %>
+      </div>
+
+    </div>
+
+    <footer class="row">
+      <div class="large-12 columns">
+        <hr />
+        <div class="row">
+          <div class="small-6 columns">
+            <p>&copy; Copyright Steve Faulkner</p>
+          </div>
+          <div class="small-6 columns">
+            <ul class="inline-list right">
+              <li><a href="https://twitter.com/southpolesteve">Twitter</a></li>
+              <li><a href="https://github.com/southpolesteve">Github</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
