@@ -14,7 +14,6 @@ ignore 'post.erb'
 
 activate :deploy do |deploy|
   deploy.method = :git
-  deploy.after_build = true
 end
 
 activate :blog do |blog|
