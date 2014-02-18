@@ -58,7 +58,7 @@
 
 &lt;p&gt;I&amp;rsquo;ll preface this by saying I&amp;rsquo;m a self-admitted &lt;a href="http://emberjs.com/"&gt;Ember.js&lt;/a&gt; fan boy :)&lt;/p&gt;
 
-&lt;p&gt;Angular is designed to make building javascript apps easier. It provides man common tools so you don&amp;rsquo;t have to write them yourself (just like Rails provides ActiveRecord models). It&amp;rsquo;s worth going through some tutorials to see how Angular&amp;rsquo;s features work for you.&lt;/p&gt;
+&lt;p&gt;Angular is designed to make building javascript apps easier. It provides many common tools so you don&amp;rsquo;t have to write them yourself (just like Rails provides ActiveRecord models). It&amp;rsquo;s worth going through some tutorials to see how Angular&amp;rsquo;s features work for you.&lt;/p&gt;
 
 &lt;p&gt;For me, one of the biggest features of a JS framework like angular is data binding. This means that when your javascript model gets updated, those change propagate to the UI. Imagine a web app like Rdio or Spotify. When you click &amp;ldquo;play&amp;rdquo; on a track all kinds of stuff on the page changes. The song title changes, the icons change, the play bar starts moving, the album art changes. You can imagine that keeping track of what needs updating or already has updated can get messy. Hence the phrase &amp;ldquo;spaghetti&amp;rdquo; code. Angular makes this much simpler by keeping track of what elements depend on what data and updating everything automatically.&lt;/p&gt;
 
