@@ -20,25 +20,25 @@ Angular is a client side javascript framework. It provides all the tools necessa
 
 Let me try and answer your question by breaking it down into a bunch of smaller ones:
 
-### Why build a client side javascript app?
+###### Why build a client side javascript app?
 
 A lot of reasons. Speed is one. Only communicating via an API can be much faster. It also makes delivering your app to the browser much simpler since it is just a static HTML/JS/CSS file. Depending on the app, you may also be able to offload certain tasks to the browser which saves server resources.
 
 For me, the main advantage has come from the mentality of divorcing the backend completely from the front end. This provides better separation of concerns. Both parts can be worked on independently as long as the API remains the same. This forces me to write better code. If your front end is a JS app, you can't call directly to the database like you could in a rails app.
 
-### Why use a javascript framework?
+###### Why use a javascript framework?
 
 Frameworks allow you to write apps quickly. Just like its easier to write a web app in Ruby using Rails than completely from scratch. Of course there are draw backs to frameworks too. When you try do something the framework isn't designed for things can get ugly quick. This point is also endlessly debated by programmers everywhere.
 
-### Why use Rails as a backend API?
+###### Why use Rails as a backend API?
 
 Check out this [blog post by Alex MacCaw](http://blog.alexmaccaw.com/rails-is-just-and-api-and-that-s-ok) that does a pretty good job of explaining Rails as a backend. Turns out Rails is pretty good at making APIs. Your views are just JSON or XML responses instead of HTML.
 
-### Why use Rails to package a javascript app?
+###### Why use Rails to package a javascript app?
 
 Because the Rails asset pipeline is pretty decent at building javascript. It will help you organize, concatenate and minify your javascript. There are also ton of other tools out there that perform these tasks in various languages. Check out grunt.js for a javascript based alternative.
 
-### Why use Angular as a javascript framework?
+###### Why use Angular as a javascript framework?
 
 I'll preface this by saying I'm a self-admitted [Ember.js](http://emberjs.com/) fan boy :)
 
@@ -46,7 +46,7 @@ Angular is designed to make building javascript apps easier. It provides man com
 
 For me, one of the biggest features of a JS framework like angular is data binding. This means that when your javascript model gets updated, those change propagate to the UI. Imagine a web app like Rdio or Spotify. When you click "play" on a track all kinds of stuff on the page changes. The song title changes, the icons change, the play bar starts moving, the album art changes. You can imagine that keeping track of what needs updating or already has updated can get messy. Hence the phrase "spaghetti" code. Angular makes this much simpler by keeping track of what elements depend on what data and updating everything automatically.
 
-### Why use Angular and Rails together?
+###### Why use Angular and Rails together?
 
 For all the reasons above! Rails is great for building sever APIs. Angular is great for building client side javascript apps. They are both great at what they do so in combination they can make great apps.
 
