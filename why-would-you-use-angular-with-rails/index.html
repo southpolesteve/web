@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <meta name="google-site-verification" content="V9_Qzb5a8ui7PjNohLJDjLj9zT84ssPv3B7QNnczJkw" />
+    <link href="../stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="row">
+      <div class="large-12 columns">
+        <h2><a href="/">South Pole Steve</a></h2>
+        <hr />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-12 columns" role="content">
+          <article>
+    <h3>Why would you use Angular with Rails?</h3>
+    <p>A few weeks ago, someone posted to our <a href="https://groups.google.com/forum/#!topic/mad-railers/KVA6cbgm1oI">local Ruby meetup group</a> with the following question:</p>
+
+<blockquote>
+<p>Recently I have seen a ton of information tutorials, blog posts etc. about combining AngularJS with rails. But thus far I have not seen a compelling reason to follow the trend. Is this nothing more than hype over a new framework or does angular offer significant improvements over the rails standard templates? As an example in tutorials I see a lot of angular repeaters replacing resource.each statements but I don&rsquo;t see this kind of thing providing any tangible benefits.</p>
+</blockquote>
+
+<p>I ended up sending a lengthy reply which I have decided to edit a bit and repost here&hellip;</p>
+
+<p>First off, to use a bad analogy, your question is a bit like asking &ldquo;Why should I use a motorcycle?&rdquo;</p>
+
+<p>We&rsquo;ll where are you trying to go? What are you trying to do? If your trying to get to Australia, a boat might be a better option. Or a plane would get you there much faster but cost more money. Rails and Angular are both tools and it is important to understand what you want to do so you can decide which tool is right for the job.</p>
+
+<p>Rails is a server side MVC framework. It provides all the tools you need to create a web app. It delivers HTML to the browser but can also power APIs. Out of the box it is primarily used for sever rendered websites.</p>
+
+<p>Angular is a client side javascript framework. It provides all the tools necessary to create a javascript app that runs in the browser and talks to an API. It can be delivered to the browser as a static JS file</p>
+
+<p>Let me try and answer your question by breaking it down into a bunch of smaller ones:</p>
+
+<h3>Why build a client side javascript app?</h3>
+
+<p>A lot of reasons. Speed is one. Only communicating via an API can be much faster. It also makes delivering your app to the browser much simpler since it is just a static HTML/JS/CSS file. Depending on the app, you may also be able to offload certain tasks to the browser which saves server resources.</p>
+
+<p>For me, the main advantage has come from the mentality of divorcing the backend completely from the front end. This provides better separation of concerns. Both parts can be worked on independently as long as the API remains the same. This forces me to write better code. If your front end is a JS app, you can&rsquo;t call directly to the database like you could in a rails app.</p>
+
+<h3>Why use a javascript framework?</h3>
+
+<p>Frameworks allow you to write apps quickly. Just like its easier to write a web app in Ruby using Rails than completely from scratch. Of course there are draw backs to frameworks too. When you try do something the framework isn&rsquo;t designed for things can get ugly quick. This point is also endlessly debated by programmers everywhere.</p>
+
+<h3>Why use Rails as a backend API?</h3>
+
+<p>Check out this <a href="http://blog.alexmaccaw.com/rails-is-just-and-api-and-that-s-ok">blog post by Alex MacCaw</a> that does a pretty good job of explaining Rails as a backend. Turns out Rails is pretty good at making APIs. Your views are just JSON or XML responses instead of HTML.</p>
+
+<h3>Why use Rails to package a javascript app?</h3>
+
+<p>Because the Rails asset pipeline is pretty decent at building javascript. It will help you organize, concatenate and minify your javascript. There are also ton of other tools out there that perform these tasks in various languages. Check out grunt.js for a javascript based alternative.</p>
+
+<h3>Why use Angular as a javascript framework?</h3>
+
+<p>I&rsquo;ll preface this by saying I&rsquo;m a self-admitted <a href="http://emberjs.com/">Ember.js</a> fan boy :)</p>
+
+<p>Angular is designed to make building javascript apps easier. It provides man common tools so you don&rsquo;t have to write them yourself (just like Rails provides ActiveRecord models). It&rsquo;s worth going through some tutorials to see how Angular&rsquo;s features work for you.</p>
+
+<p>For me, one of the biggest features of a JS framework like angular is data binding. This means that when your javascript model gets updated, those change propagate to the UI. Imagine a web app like Rdio or Spotify. When you click &ldquo;play&rdquo; on a track all kinds of stuff on the page changes. The song title changes, the icons change, the play bar starts moving, the album art changes. You can imagine that keeping track of what needs updating or already has updated can get messy. Hence the phrase &ldquo;spaghetti&rdquo; code. Angular makes this much simpler by keeping track of what elements depend on what data and updating everything automatically.</p>
+
+<h3>Why use Angular and Rails together?</h3>
+
+<p>For all the reasons above! Rails is great for building sever APIs. Angular is great for building client side javascript apps. They are both great at what they do so in combination they can make great apps.</p>
+
+<p>Personally, I think Rails and Ember are much better matched. They have similar philosophies about how apps should be built that make them work well together. In fact one of the Ember core team members is also a Rails core team member. But that is just my opinion. I&rsquo;ve used angular too and think it is a great tool.</p>
+
+  </article>
+
+      </div>
+
+    </div>
+
+    <footer class="row">
+      <div class="large-12 columns">
+        <hr />
+        <div class="row">
+          <div class="small-6 columns">
+            <ul class="inline-list left">
+              <li><a href="/about">About</a></li>
+              <li><a href="https://twitter.com/southpolesteve">Twitter</a></li>
+              <li><a href="https://github.com/southpolesteve">Github</a></li>
+              <li><a href="/feed.xml">RSS</a></li>
+            </ul>
+          </div>
+          <div class="small-6 columns">
+            <p class="right">&copy; 2013 Steve Faulkner</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-5817045-2']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </body>
+</html>
