@@ -42,7 +42,7 @@ Because the Rails asset pipeline is pretty decent at building javascript. It wil
 
 I'll preface this by saying I'm a self-admitted [Ember.js](http://emberjs.com/) fan boy :)
 
-Angular is designed to make building javascript apps easier. It provides man common tools so you don't have to write them yourself (just like Rails provides ActiveRecord models). It's worth going through some tutorials to see how Angular's features work for you.
+Angular is designed to make building javascript apps easier. It provides many common tools so you don't have to write them yourself (just like Rails provides ActiveRecord models). It's worth going through some tutorials to see how Angular's features work for you.
 
 For me, one of the biggest features of a JS framework like angular is data binding. This means that when your javascript model gets updated, those change propagate to the UI. Imagine a web app like Rdio or Spotify. When you click "play" on a track all kinds of stuff on the page changes. The song title changes, the icons change, the play bar starts moving, the album art changes. You can imagine that keeping track of what needs updating or already has updated can get messy. Hence the phrase "spaghetti" code. Angular makes this much simpler by keeping track of what elements depend on what data and updating everything automatically.
 
